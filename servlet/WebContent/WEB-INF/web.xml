@@ -10,6 +10,15 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <filter>
+    <filter-name>HitsFilter</filter-name>
+    <filter-class>com.cup.filter.HitsFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>HitsFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
     <filter-name>AuthenFilter</filter-name>
     <filter-class>com.cup.filter.AuthenFilter</filter-class>
   </filter>
@@ -29,6 +38,7 @@
     <filter-name>LoginFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  
   <servlet>
     <servlet-name>HelloServlet</servlet-name>
     <servlet-class>com.cup.servlet.HelloServlet</servlet-class>
@@ -76,9 +86,15 @@
   <servlet-mapping>
     <servlet-name>PageRedirect</servlet-name>
     <url-pattern>/servlet/PageRedirect</url-pattern>
-  </servlet-mapping>  
-  
-  
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PageHitCounter</servlet-name>
+    <servlet-class>com.cup.servlet.PageHitCounter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PageHitCounter</servlet-name>
+    <url-pattern>/servlet/PageHitCounter</url-pattern>
+  </servlet-mapping>
   <error-page>
     <error-code>404</error-code>
     <location>/handler/ErrorHandler</location>
