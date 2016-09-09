@@ -29,7 +29,6 @@
     <filter-name>LoginFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  
   <servlet>
     <servlet-name>HelloServlet</servlet-name>
     <servlet-class>com.cup.servlet.HelloServlet</servlet-class>
@@ -62,14 +61,33 @@
     <servlet-name>ErrorHandler</servlet-name>
     <url-pattern>/handler/ErrorHandler</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>SessionTrack</servlet-name>
+    <servlet-class>com.cup.servlet.SessionTrack</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionTrack</servlet-name>
+    <url-pattern>/servlet/SessionTrack</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PageRedirect</servlet-name>
+    <servlet-class>com.cup.servlet.PageRedirect</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PageRedirect</servlet-name>
+    <url-pattern>/servlet/PageRedirect</url-pattern>
+  </servlet-mapping>  
+  
   
   <error-page>
-  	<error-code>404</error-code>
-  	<location>/handler/ErrorHandler</location>
+    <error-code>404</error-code>
+    <location>/handler/ErrorHandler</location>
   </error-page>
-  
   <error-page>
-  	<exception-type>java.lang.Throwable</exception-type>
-  	<location>/handler/ErrorHandler</location>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/handler/ErrorHandler</location>
   </error-page>
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
 </web-app>
