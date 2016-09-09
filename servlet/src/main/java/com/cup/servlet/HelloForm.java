@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -47,6 +48,17 @@ public class HelloForm extends HttpServlet {
 			    + request.getParameter("last_name") + "\n" +
 			    "</ul>\n" +
 			    "</body></html>");
+
+		Cookie first_name = new Cookie("first_name", request.getParameter("first_name")); // ÖÐÎÄ×ªÂë
+		Cookie last_name = new Cookie("last_name", request.getParameter("last_name"));
+		
+	
+		first_name.setMaxAge(60); 
+		last_name.setMaxAge(120); 
+
+		response.addCookie( first_name );
+		response.addCookie( last_name );
+		
 	}
 
 	/**
