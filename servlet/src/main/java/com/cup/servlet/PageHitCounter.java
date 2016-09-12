@@ -30,7 +30,7 @@ public class PageHitCounter extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
-		//3sec后自动刷新
+		//3sec refresh
 		response.setIntHeader("Refresh", 3);
 		
 		int hitCounts = Count.getHitCounts();
