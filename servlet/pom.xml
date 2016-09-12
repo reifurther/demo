@@ -7,15 +7,10 @@
   <version>1.0</version>
   <packaging>war</packaging>
   <dependencies>
-  	<dependency>
-  		<groupId>javax.servlet</groupId>
-		<artifactId>servlet-api</artifactId>
-		<version>2.5</version>
-  	</dependency>
   	<dependency>  
 	    <groupId>org.apache.tomcat</groupId>  
 	    <artifactId>tomcat-servlet-api</artifactId>
-	    <version>7.0.62</version>  
+	    <version>8.0.37</version>  
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -32,22 +27,13 @@
     	<plugin>
     		<groupId>org.apache.maven.plugins</groupId>
         	<artifactId>maven-compiler-plugin</artifactId>
-       		<version>3.1</version>
+       		<version>3.0</version>
        		<configuration>
-       			<source>1.8</source>
-       			<target>1.8</target>
-       		</configuration>
-    	</plugin>
-    	<plugin>
-    		<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-war-plugin</artifactId>
-			<version>2.6</version>
-    		<configuration>
-    			<failOnMissingWebXml>false</failOnMissingWebXml>
-    		</configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+			</configuration>
     	</plugin>
     </plugins>
     
-  </build>
-  
+  </build>  
 </project>
