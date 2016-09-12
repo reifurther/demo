@@ -39,7 +39,7 @@ public class ErrorHandler extends HttpServlet {
 				if (requestUri == null){
 					requestUri = "Unknown";
 				}
-				// 设置响应内容类型
+				//
 				response.setContentType("text/html;charset=UTF-8");
 			
 				PrintWriter out = response.getWriter();
@@ -52,22 +52,22 @@ public class ErrorHandler extends HttpServlet {
 			     	"<body bgcolor=\"#f0f0f0\">\n");
 			   	out.println("<h1>Info</h1>");
 			   	if (throwable == null && statusCode == null){
-			      	out.println("<h2>错误信息丢失</h2>");
-			      	out.println("请返回 <a href=\"" + 
+			      	out.println("<h2>error catch</h2>");
+			      	out.println("<a href=\"" + 
 			        response.encodeURL("http://localhost:8080/") + 
-			        	"\">主页</a>。");
+			        	"\"></a>");
 			   	}else if (statusCode != null) {
-			      	out.println("错误代码 : " + statusCode);
+			      	out.println("status code: " + statusCode);
 				}else{
-				   	out.println("<h2>错误信息</h2>");
+				   	out.println("<h2>error info</h2>");
 			      	out.println("Servlet Name : " + servletName + 
 			                          "</br></br>");
-			      	out.println("异常类型 : " + 
+			      	out.println("class : " + 
 			                          throwable.getClass( ).getName( ) + 
 			                          "</br></br>");
-			      	out.println("请求 URI: " + requestUri + 
+			      	out.println("URI: " + requestUri + 
 			                          "<br><br>");
-			      	out.println("异常信息: " + 
+			      	out.println("error message: " + 
 			                              throwable.getMessage( ));
 			   	}
 			   	out.println("</body>");

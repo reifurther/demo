@@ -43,11 +43,11 @@ response.setContentType("text/html;charset=UTF-8");
 				"<body bgcolor=\"#f0f0f0\">\n" +
 			    "<h1 align=\"center\">" + title + "</h1>\n" +
 			    "<ul>\n" +
-			    "  <li><b>Option A</b>£º"
+			    "  <li><b>Option A</b>"
 			    + request.getParameter("option_a") + "\n" +
-			    "  <li><b>Option B</b>£º"
+			    "  <li><b>Option B</b>"
 			    + request.getParameter("option_b") + "\n" +
-			    "  <li><b>Option C</b>£º"
+			    "  <li><b>Option C</b>"
 			    + request.getParameter("option_c") + "\n" +
 			    "</ul>\n" +
 			    "</body></html>");
