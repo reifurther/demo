@@ -1,4 +1,4 @@
-package com.cup.java_base.overloading;
+package com.cup.overloading;
 
 public class RickysOverriding {
 	public static void main(String[] args) {
