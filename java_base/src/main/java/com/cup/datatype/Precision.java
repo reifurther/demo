@@ -33,7 +33,7 @@ public class Precision {
 
 
     public static void main(String[] args) {
-        System.out.println("precision add: " + Precision.add(2.01, 3.0001));
+        System.out.println("precision add: " + Precision.add(3.01, 0.990100000000000400281));
         System.out.println("normal add: " + (2.01 + 3.0001));
 
         System.out.println("precision substract: " + Precision.substract(3.0001, 2.01));
@@ -44,6 +44,9 @@ public class Precision {
 
         System.out.println("precision divide: " + Precision.divide(3.0001, 2.01));
         System.out.println("normal divide: " + (3.0001 / 2.01));
+
+        System.out.println("2.0-1.1:" + (2.0-1.1));
+
     }
 
 }
