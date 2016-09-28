@@ -1,9 +1,9 @@
 package com.cup.controller;
 
+import com.cup.repository.UserRepository;
 import com.cup.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,7 +21,7 @@ import java.util.Date;
 public class LoginController {
 
     @Autowired
-    private UserService userService;
+    private UserRepository userRepository;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String loginPage(){
@@ -30,8 +30,6 @@ public class LoginController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ModelAndView checkLogin(HttpServletRequest request, LoginCommand loginCommand){
-
-
 
         boolean isValidUser = userService.hasMatchUser(loginCommand.getUserName(),loginCommand.getPassword());
 
