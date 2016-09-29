@@ -5,6 +5,10 @@ package com.cup.genericity;
  */
 public class Automobile {
 
+    public Automobile(){
+        toS();
+    }
+
     public void toS(){
         System.out.println("toS from Automobile");
     }
